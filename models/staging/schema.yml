@@ -1,0 +1,127 @@
+
+version: 2
+
+models:
+    - name: ae_ad_network_1_campaign_updates
+      description: "Campaign history report from Ad Network 1"
+      columns:
+          - name: campaign_id
+            description: "ID of a marketing campaign from Ad Network 1"
+            tests:
+                - not_null
+          - name: update_date
+            description: "Date when the campaign info was updated"
+            tests:
+                - not_null
+          - name: name
+            description: "Name of the campaign"
+            tests:
+                - not_null
+    - name: ae_ad_network_1_geo_dictionary
+      description: "Geo dictionary for Ad Network 1"
+      columns:
+          - name: id
+            description: "ID of a marketing campaign from Ad Network 1"
+            tests:
+                - not_null
+          - name: country_code
+            description: "Alpha-2 code of a country"
+            tests:
+                - not_null
+          - name: name
+            description: "Full name of the location"
+            tests:
+                - not_null
+          - name: location_type
+            description: "Type of the location"
+            tests:
+                - not_null
+    - name: ae_ad_network_1_country_report
+      description: "Country-level performance report of Ad Network 1"
+      columns:
+          - name: date
+            description: "Date"
+            tests:
+                - not_null
+          - name: campaign_id 
+            description: "ID of a marketing campaign from Ad Network 1"
+            tests:
+                - not_null
+          - name: country_id
+            description: "ID of a location (country)"
+            tests:
+                - not_null
+          - name: spend
+            description: "Ad spend"
+            tests:
+                - not_null
+          - name: impressions
+            description: "# Impressions of the ads"
+            tests:
+                - not_null
+          - name: clicks
+            description: "# Clicks on the ads"
+            tests:
+                - not_null
+    - name: ae_ad_network_1_detailed_report
+      description: "State-level performance report of Ad Network 1 when applicable"
+      columns:
+          - name: date 
+            description: "Date"
+            tests:
+                - not_null
+          - name: campaign_id 
+            description: "ID of a marketing campaign from Ad Network 1"
+            tests:
+                - not_null
+          - name: country_id
+            description: "ID of a location (country)"
+            tests:
+                - not_null
+          - name: state_id
+            description: "ID of a location (state)"
+            tests:
+                - not_null
+          - name: spend
+            description: "Ad spend"
+            tests:
+                - not_null
+          - name: impressions
+            description: "# Impressions of the ads"
+            tests:
+                - not_null
+          - name: clicks
+            description: "# Clicks on the ads"
+            tests:
+                - not_null
+    - name: ae_ad_network_2_report
+      description: "Performance report of Ad Network 2"
+      columns:
+          - name: id
+            description: "ID of a marketing campaign from Ad Network 2"
+            tests:
+                - not_null
+          - name: campaign_name
+            description: "Name of a marketing campaign from Ad Network 2"
+            tests:
+                - not_null
+          - name: date 
+            description: "Date"
+            tests:
+                - not_null
+          - name: spend
+            description: "Ad spend"
+            tests:
+                - not_null
+          - name: impressions
+            description: "# Impressions of the ads"
+            tests:
+                - not_null
+          - name: clicks
+            description: "# Clicks on the ads"
+            tests:
+                - not_null
+          
+          
+
+
