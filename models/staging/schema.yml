@@ -121,6 +121,33 @@ models:
             description: "# Clicks on the ads"
             tests:
                 - not_null
+    - name: network_1_detailed_geo
+      description: "Network 1 Detailed report with extra geo information from geo dictionary" 
+      columns:
+          - name: date 
+            description: "Date"
+          - name: campaign_id 
+            description: "ID of a marketing campaign from Ad Network 1"
+          - name: country_id
+            description: "ID of a location (country)"
+          - name: state_id
+            description: "ID of a location (state)"
+            tests:
+                - not_null
+          - name: spend
+            description: "Ad spend"
+          - name: impressions
+            description: "# Impressions of the ads"
+          - name: clicks
+            description: "# Clicks on the ads"
+          - name: country_code
+            description: "Alpha-2 code of a country"
+            tests:
+                - not_null
+          - name: state_name
+            description: "Full name of the state"
+            tests:
+                - not_null
           
           
 
