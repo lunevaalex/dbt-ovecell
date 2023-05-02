@@ -1,3 +1,5 @@
+{{ config(materialized='table') }}
+
 WITH country_geo_ranked AS (
   SELECT *,
     ROW_NUMBER() OVER (PARTITION BY id, location_type ORDER BY id) AS country_rank

@@ -145,7 +145,7 @@ models:
             tests:
                 - not_null
     - name: dim_geo_network_1_country_report
-      description: "Network 1 Country report with extra geo information from geo dictionary" 
+      description: "Network 1 country report with extra geo information from geo dictionary"
       columns:
           - name: date
             description: "Date"
@@ -160,6 +160,33 @@ models:
           - name: clicks
             description: "# Clicks on the ads"
           - name: country_name
-            description: "Name of the country" 
+            description: "Name of the country"
           - name: country_code
-            description: "Alpha-2 code of a country"
+            description: "Alpha-2 code of a country"    
+    - name: network_1_unique_campaign_ids
+      description: "Unique campaign_id list for Ad Network 1"
+      columns:
+          - name: campaign_id
+            description: "ID of a marketing campaign from Ad Network 1"
+            tests:
+                - not_null
+                - unique
+    - name: network_1_final_model
+      columns:
+          - name: campaign_id,
+          - name: update_date,
+          - name: campaign_name,
+          - name: detailed_report_date,
+          - name: country_id,
+          - name: state_id,
+          - name: state_name,
+          - name: country_name,
+          - name: country_code,
+          - name: detailed_report_spend,
+          - name: detailed_report_impressions,
+          - name: detailed_report_clicks,
+          - name: country_report_date,
+          - name: country_report_spend,
+          - name: country_report_impressions,
+          - name: country_report_clicks
+                    
