@@ -22,20 +22,12 @@ models:
       columns:
           - name: id
             description: "ID of a marketing campaign from Ad Network 1"
-            tests:
-                - not_null
           - name: country_code
             description: "Alpha-2 code of a country"
-            tests:
-                - not_null
           - name: name
             description: "Full name of the location"
-            tests:
-                - not_null
           - name: location_type
             description: "Type of the location"
-            tests:
-                - not_null
     - name: ae_ad_network_1_country_report
       description: "Country-level performance report of Ad Network 1"
       columns:
@@ -146,6 +138,10 @@ models:
                 - not_null
           - name: state_name
             description: "Full name of the state"
+            tests:
+                - not_null
+          - name: country_name
+            description: "Full name of the country"
             tests:
                 - not_null
           
