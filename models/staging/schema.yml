@@ -189,4 +189,27 @@ models:
           - name: country_report_spend,
           - name: country_report_impressions,
           - name: country_report_clicks
+    - name: networks_unified_datamart
+      columns:
+          - name: network_type
+          - name: campaign_id
+          - name: n2_date
+          - name: n1_update_date
+          - name: campaign_name
+          - name: n2_spend
+          - name: n2_impressions
+          - name: n2_clicks
+          - name: n1_country_id
+          - name: n1_state_id
+          - name: n1_state_name
+          - name: n1_country_name
+          - name: n1_country_code
+          - name: n1_detailed_report_date
+          - name: n1_detailed_report_spend
+          - name: n1_detailed_report_impressions
+          - name: n1_detailed_report_clicks
+          - name: n1_country_report_date
+          - name: n1_country_report_spend
+          - name: n1_country_report_impressions
+          - name: n1_country_report_clicks
                     
